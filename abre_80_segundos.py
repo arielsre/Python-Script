@@ -1,3 +1,6 @@
+"""Este script realiza un ping por 1 minuto cada 60 minutos, y guarda lo recibido
+en el archivo resultado_ping.txt"""
+
 import subprocess
 import time
 
@@ -14,7 +17,7 @@ while True:
             ['gnome-terminal', '--', 'bash', '-c', comando_ping])
 
         # Esperar 80segundos
-        time.sleep(80)  # Esperar 60 minutos
+        time.sleep(3600)  # Esperar 60 minutos
 
         # Terminar el proceso (cerrar la terminal)
         proceso.terminate()  # O puedes usar proceso.kill() para forzar la terminación
