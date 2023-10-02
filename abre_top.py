@@ -5,7 +5,7 @@ import time
 archivo_resultado = "resultado_ping.txt"
 
 # Comando para realizar el ping durante 1 minuto
-comando_ping = f"ping -c 60 127.0.0.1 > {archivo_resultado}"
+comando_ping = f"top > {archivo_resultado}"
 
 while True:
     try:
@@ -13,8 +13,8 @@ while True:
         proceso = subprocess.Popen(
             ['gnome-terminal', '--', 'bash', '-c', comando_ping])
 
-        # Esperar 80segundos
-        time.sleep(80)  # Esperar 60 minutos
+        # Esperar 80 segundos
+        time.sleep(80)  # Esperar 80 segundos
 
         # Terminar el proceso (cerrar la terminal)
         proceso.terminate()  # O puedes usar proceso.kill() para forzar la terminación
