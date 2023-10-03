@@ -2,7 +2,7 @@ import subprocess
 import time
 
 # resultado top
-archivo_resultado = "resultado_top.txt"
+archivo_resultado = "resultado_toplogin.txt"
 
 # comando
 comando_top = f"top >> {archivo_resultado}"
